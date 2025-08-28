@@ -12,7 +12,7 @@ At first I ran an nmap scan as usual.
 There were 3 TCP ports open along with some noise not worth attention.
 After running the deeper scan with script and version flags I found out the SMB username and operating system.
 
-![nmap][images/nmap-blue.png]
+![nmap](images/nmap-blue.png)
 
 Then I enumerated SMB shares with the obtained username, yet nothing of interest was found there except validating the user.
 
@@ -27,7 +27,7 @@ This was linked to a great ransomware attack called WannaCry back in 2017 where 
 I looked for an exploit and found out that it is in Metasploit.
 So I searched it up.
 
-![msf1][images/msf1.png]
+![msf1](images/msf1.png)
 
 At first I used the scanner for detection of this vulnerability and it confirmed that the target is indeed vulnerable.
 
@@ -37,13 +37,13 @@ Then I used the first one suggested — EternalBlue.
 But after running it I didn’t get the session, so I was confused. Then I set up the SMB username — since it wasn’t mandatory I thought it would work without it.
 I ran it and once again a session was not created.
 
-![msf2][images/msf2.png]
+![msf2](images/msf2.png)
 
 I looked closely at the OPTIONS and there I found the LHOST was set to my IP address. However I was connected to the target via VPN, so I edited LHOST to my address on that network and voilà! A Meterpreter session was created.
 
 Then I grabbed the user flag and, since I already had admin access, the root flag.
 
-![session][images/meterpeter.png]
-![win][htb.png]
+![session](images/meterpeter.png)
+![win](htb.png)
 
 This machine was really straightforward indeed, and it used a real-world vulnerability for exploitation, which is very exciting. Also absence of privilege escalation made my job much easier.
