@@ -1,5 +1,5 @@
 Blue – HackTheBox Writeup
-![blue][images/blue.png]
+![blue](images/blue.png)
 This is my first write-up on this page.
 As this is the first machine I managed to crack without following any write-up.
 
