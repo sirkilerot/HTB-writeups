@@ -44,6 +44,7 @@ I looked closely at the OPTIONS and there I found the LHOST was set to my IP add
 Then I grabbed the user flag and, since I already had admin access, the root flag.
 
 ![session](images/meterpeter.png)
-![win](htb.png)
+
+![win](images/htb.png)
 
 This machine was really straightforward indeed, and it used a real-world vulnerability for exploitation, which is very exciting. Also absence of privilege escalation made my job much easier.
