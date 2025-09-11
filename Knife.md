@@ -10,7 +10,7 @@ My last resort was to open wappalyzer and view technologies running on the websi
 Luckily the website was using PHP 8.1.0 and after some googling i found out that this version has a backdoor that allows RCE.
 ![wapp](images/knife/knife-wapp.png)
 This backdoor can be accessed by adding User-Agentt header and inside write zerodiumsystem("ls"); and command gets executed.
-![burp](images/knife/knife-nurp.png)
+![burp](images/knife/knife-burp.png)
 To access this backdoor i captured request in burpsuite added header and BOOM i got user shell!
 ## Privilege escalation
 Now i have shell running as user james and can grab user flag.
