@@ -8,6 +8,7 @@ Iwisited the http website however nothing of interest was found there as there w
 I tried directory enumeration but nothing of interest was found there.  
 My last resort was to open wappalyzer and view technologies running on the website.  
 Luckily the website was using PHP 8.1.0 and after some googling i found out that this version has a backdoor that allows RCE.  
+
 ![wapp](images/knife/knife-wapp.png)  
   
 This backdoor can be accessed by adding User-Agentt header and inside write zerodiumsystem("ls"); and command gets executed.  
