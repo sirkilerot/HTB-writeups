@@ -1,5 +1,6 @@
 Bahed - HTB Writeup 
-The bashed was a simple the box that was already running a webshell then the privileges were escalated by python script.
+[top]
+The bashed was a simple the box that was already running a webshell then the privileges were escalated by python script.  
 The nmap scan revealed the only port 80 with no ssh which is unsusual.
 I opened the site at http and creator of the site has disclosed the information that he inicorporated phpbash ono this site.
 So i fuzzed directories and appended phpbash.php and found its location at /dev. So there goes the user flag.
