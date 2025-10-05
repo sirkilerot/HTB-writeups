@@ -16,5 +16,7 @@ So now that the payload was executed came time to spawn the reverse shell.
 Tough inserting the url encoded reverse shell in place of payload should have worked it didn't.  
 Luckily there is a POC at github https://github.com/IIIeJlyXaKapToIIIKu/CVE-2025-24893-XWiki-unauthenticated-RCE-via-SolrSearch.  
 That i ran and it worked.  
-however i got shell as xwiki user that didn't have any privileges at all after some time of thinking and exploring the machine i found out that i want to be logged in as user oliver and inside my users dir i found a file where was a password i reused it do ssh as oliver and got user flag.  
+However i got shell as xwiki user that didn't have any privileges at all after some time of thinking and exploring the machine i found out that i want to be logged in as user oliver and inside my users dir i found a file where was a password i reused it do ssh as oliver and got user flag.  
+![creds](images/editor/editor-hybernate.png)
+![2](images/editor/editor-pass.png)
 As for root i did not figure that one.  
