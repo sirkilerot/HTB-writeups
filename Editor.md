@@ -18,5 +18,5 @@ Luckily there is a POC at github https://github.com/IIIeJlyXaKapToIIIKu/CVE-2025
 That i ran and it worked.  
 However i got shell as xwiki user that didn't have any privileges at all after some time of thinking and exploring the machine i found out that i want to be logged in as user oliver and inside my users dir i found a file where was a password i reused it do ssh as oliver and got user flag.  
 ![creds](images/editor/editor-hybernate.png)
-![2](images/editor/editor-pass.png)
+![2](images/editor/editor-pass.png)  
 As for root i did not figure that one.  
