@@ -1,5 +1,5 @@
 Editor - HTB Writeup
-![top](images)
+![top](images/editor/editor-head.png)
 This was an easy difficulty box that involved exploitation of aplication called xwiki. 
 First thing first i started with port scan that revealed ssh,http and http proxy.
 I visited the http domain editor.htb there was not much found except the application i could download. 
