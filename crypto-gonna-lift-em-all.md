@@ -2,7 +2,7 @@ HTB - Gonna Lift Em All
 This is not a box  this is an easy difficulty crypto challenge.  
 In this challenge i was given the chall.py file that contained code that encrypted the flag,  
 and output.txt file providing me with some variables that were used for encryption of the message.  
-#Header1 code analysis  
+# Code analysis  
 ![image1](images/gonna/gonna-f1.png)
 the first function creates random prime number p of 1024 bits,then g,x that are somwhere between 2 and p-2.  
 and then creats h with power function. That means h = g**x%p .  
