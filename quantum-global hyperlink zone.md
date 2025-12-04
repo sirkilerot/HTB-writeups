@@ -1,8 +1,43 @@
-Global Hyperlink Zone - HTB Writeup
-This is a very easy difficulty quantum computing challenge.
-The quantum is new challenge category on HTB .
-In this challenge i was given running python server and its source code.
-The code using qiskit module. Qiskit module allows regulaar program o utilize quantum computer.
-To gain flag i needed to thoroughly understand the code after that it turned into simple logical puzzle.
-Source code analysis:
+# Global Hyperlink Zone - HTB Writeup
 
+This is a very easy quantum computing challenge.  
+The Quantum category is a new challenge type on HTB.
+
+In this challenge I was given a running Python server and its source code.  
+The code uses the Qiskit module. Qiskit allows a regular program to utilize a quantum computer (or a simulator).
+
+To get the flag, I needed to thoroughly understand the code. After that, the challenge turned into a simple logical puzzle.
+
+## Source Code Analysis
+
+![image1](images/hyper/hyperlink-1.png)
+
+The code starts by importing Qiskit modules that allow the program to work with quantum circuits.  
+It also contains many lines that handle running the quantum process. These are mostly utility functions and not important for solving the challenge.
+
+![image1](images/hyper/hyperlink-7.png)
+
+The program creates **5 circuits**, meaning I can manipulate 5 variables (qubits).  
+It also defines the input format, which must be provided as:
+
+
+For example: `H:2;CX:0,1`
+
+![image2](images/hyper/hyperlink-2.png)
+
+These are the quantum logic gates. Their functions were explained to me in this graph:
+
+![image3](images/hyper/hyperlink-6.png)
+
+Using these commands, I can manipulate all 5 circuits.
+
+![image3](images/hyper/hyperlink-3.png)
+
+This part defines the actual challenge:  
+I have to make circuits **0, 1, and 3 the same**, and circuits **2 and 4 the same**, but **the two groups must be different**.
+
+## Solution
+
+I used gate **H** to initialize the first value, then used **CX** to link circuits 0, 1, 3, and 2.  
+Then I used **X** to flip the value of circuit 2, and another **CX** to link circuit 2 with circuit 4.  
+And bang — there goes the flag.
