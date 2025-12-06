@@ -34,7 +34,10 @@ I have to make circuits **0, 1, and 3 the same**, and circuits **2 and 4 the sam
 ## Solution
 
 I used gate **H** to initialize the first value, then used **CX** to link circuits 0, 1, 3, and 2.  
-Then I used **X** to flip the value of circuit 2, and another **CX** to link circuit 2 with circuit 4.  
-And bang — there goes the flag.
+Then I used **X** to flip the value of circuit 2, and another **CX** to link circuit 2 with circuit 4.   
+
 ![image0](images/hyper/hyperlink-5.png)
+
+And bang — there goes the flag.
+
 
