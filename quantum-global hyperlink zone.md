@@ -1,5 +1,7 @@
 # Global Hyperlink Zone - HTB Writeup
 
+![image0](images/hyper/hyperlink-4.png)
+
 This is a very easy quantum computing challenge.  
 The Quantum category is a new challenge type on HTB.
 
@@ -34,3 +36,5 @@ I have to make circuits **0, 1, and 3 the same**, and circuits **2 and 4 the sam
 I used gate **H** to initialize the first value, then used **CX** to link circuits 0, 1, 3, and 2.  
 Then I used **X** to flip the value of circuit 2, and another **CX** to link circuit 2 with circuit 4.  
 And bang — there goes the flag.
+![image0](images/hyper/hyperlink-5.png)
+
