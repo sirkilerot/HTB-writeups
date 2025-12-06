@@ -20,7 +20,7 @@ For example: `H:2;CX:0,1`
 
 ![image2](images/hyper/hyperlink-2.png)
 
-These are the quantum logic gates. Their functions were explained to me in this graph:
+Chat gpt here explained functions of these logic gates:
 
 ![image3](images/hyper/hyperlink-6.png)
 
