@@ -13,10 +13,8 @@ To get the flag, I needed to thoroughly understand the code. After that, the cha
 ![image1](images/hyper/hyperlink-1.png)
 
 The code starts by importing Qiskit modules that allow the program to work with quantum circuits.  
-It also contains many lines that handle running the quantum process. These are mostly utility functions and not important for solving the challenge.
-The program creates **5 circuits**, meaning I can manipulate 5 variables (qubits).  
-It also defines the input format, which must be provided as:
-
+The program creates **5 circuits**, meaning I can manipulate 5 variables.  
+The input format is defined to be logic operation followed by **:** then number of circuit to manipulate and **;** to start new operation.
 
 For example: `H:2;CX:0,1`
 
