@@ -24,8 +24,6 @@ Chat gpt here explained functions of these logic gates:
 
 ![image3](images/hyper/hyperlink-6.png)
 
-Using these commands, I can manipulate all 5 circuits.
-
 ![image3](images/hyper/hyperlink-3.png)
 
 This part defines the actual challenge:  
