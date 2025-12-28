@@ -59,4 +59,5 @@ The KeePass database was encrypted and inaccessible without the correct password
 After cracking the database password, I used `kpcli` to access the KeePass database. Inside, I found SSH backup information including an `id_rsa` private key. While the stored password didn't work, the RSA key allowed me to authenticate as root.
 
 I downloaded the `id_rsa` file, formatted it correctly using `dos2unix` to handle line endings, and successfully connected as root to obtain the final flag.
+
 ![1](images/sightless/sightless-1.png)
