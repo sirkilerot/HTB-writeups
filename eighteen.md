@@ -1,4 +1,5 @@
-##Eighteen HTB Writeup
+# Eighteen HTB Writeup
+
 ![image](images/18/18-0.png)
 Eighteen is an easy difficulty windows machine that involved enumeration of mssql database and it was kinda frustrating and i didnt get root.
 Also thats why this machine didn't recieve good rating.
@@ -13,7 +14,7 @@ However for this machine i was provided credentials `kevin : iNa2we6haRj2gaw!` t
 
 ![image](images/18/18-2.png)
 
-##Mssql
+## Mssql
 
 Inside the database there were basic tables and `financial_planner` table however as user kevin i was no allowed to use that.
 After some enumeration of users i found out user names and as Claude suggested as one way to escalate privileges was to impersonate different user.
