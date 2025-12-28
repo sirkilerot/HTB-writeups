@@ -1,5 +1,7 @@
 # Sightless - HTB Writeup
 
+![2](images/sightless/sightless-0.png)
+
 Sightless is an easy difficulty machine. While obtaining the user flag is straightforward through exploiting a common CVE, the root flag is significantly more complex, requiring exploitation of the Froxlor service, database discovery, and offline hash cracking.
 
 ## User Flag
