@@ -1,4 +1,4 @@
-Eighteen HTB Writeup
+#Eighteen HTB Writeup
 ![image](images/18/18-0.png)
 Eighteen is an easy difficulty windows machine that involved enumeration of mssql database and it was kinda frustrating and i didnt get root.
 Also thats why this machine didn't recieve good rating.
