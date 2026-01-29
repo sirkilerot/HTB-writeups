@@ -18,4 +18,4 @@ The .cif is used to store crystallography data that describe crystalic structure
 So this application serves some chemistry workers to analyze their data.  
 However the python version used that we enumerated earlier is vulnerable.  
 Uploading malicious .cif file can trigger RCE because of broken eval() function.  
-[CVE-2024-23346](For more detail check out this https://www.vicarius.io/vsociety/posts/critical-security-flaw-in-pymatgen-library-cve-2024-23346)
+![CVE-2024-23346](For more detail check out this https://www.vicarius.io/vsociety/posts/critical-security-flaw-in-pymatgen-library-cve-2024-23346)
