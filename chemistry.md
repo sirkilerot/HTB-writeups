@@ -92,6 +92,9 @@ The application is used for analysing data. The application is very basic and do
 Luckily inspecting the web request that this application makes reveals it's name and version. `aiohttp/3.9.1`  
 This version has critical vulnerability under CVE-2024-23334 and there is a poc for this on github > https://github.com/TheRedP4nther/LFI-aiohttp-CVE-2024-23334-PoC  
 After downloading this poc we can soecify path to file we  want to read and it will successfuly dump the content. - if you don't use port 8080 you need to change it in the script  
+
+![image](images/chem/chem-14.png)  
+
 And that way i can grab root flag without even loggin into  a machine.  
 
 
